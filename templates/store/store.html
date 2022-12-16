@@ -130,6 +130,15 @@
                             <figcaption class="info-wrap">
                                 <div class="fix-height">
                                     <a href="{{ product.get_url}}" class="title">{{ product.product_name }}</a>
+                                    <div class="rating-star">
+                                        <span>
+                                            <i class="fa fa-star{% if product.averagereview < 0.5 %}-o{% elif single_product.averagereview >= 0.5 and product.averagereview < 1 %}-half-o{% endif %}" aria-hidden="true"></i>
+                                            <i class="fa fa-star{% if product.averagereview < 1.5 %}-o{% elif single_product.averagereview >= 1.5 and product.averagereview < 2 %}-half-o{% endif %}" aria-hidden="true"></i>
+                                            <i class="fa fa-star{% if product.averagereview < 2.5 %}-o{% elif single_product.averagereview >= 2.5 and product.averagereview < 3 %}-half-o{% endif %}" aria-hidden="true"></i>
+                                            <i class="fa fa-star{% if product.averagereview < 3.5 %}-o{% elif single_product.averagereview >= 3.5 and product.averagereview < 4 %}-half-o{% endif %}" aria-hidden="true"></i>
+                                            <i class="fa fa-star{% if product.averagereview < 4.5 %}-o{% elif single_product.averagereview >= 4.5 and product.averagereview < 5 %}-half-o{% endif %}" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
                                     <div class="price-wrap mt-2">
                                         <span class="price">₹{{ product.price }}</span>
                                         <del class="price-old">$1980</del>
